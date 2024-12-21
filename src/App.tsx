@@ -14,7 +14,7 @@ const App = () => {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         title="Mi Modal"
-        size="md"
+        size="2xl"
         position="center"
       >
         <p>Contenido del modal...</p>

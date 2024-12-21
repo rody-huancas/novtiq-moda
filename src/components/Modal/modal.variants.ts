@@ -2,13 +2,14 @@ import { cva } from "class-variance-authority";
 
 export const modalVariants = cva(
   [
-    "bg-white",
+    "bg-white dark:bg-gray-800",
     "relative",
     "w-full",
     "rounded-lg",
     "shadow-lg",
     "m-4",
     "border",
+    "border-gray-200 dark:border-gray-700",
     "z-30",
   ],
   {
@@ -18,6 +19,9 @@ export const modalVariants = cva(
         md: "max-w-md",
         lg: "max-w-lg",
         xl: "max-w-xl",
+        "2xl": "max-w-[800px]",
+        "3xl": "max-w-[900px]",
+        "4xl": "max-w-[80%]",
         full: "max-w-full",
       },
       position: {
@@ -34,12 +38,7 @@ export const modalVariants = cva(
 );
 
 export const overlayVariants = cva(
-  [
-    "fixed",
-    "inset-0",
-    "z-20",
-    "duration-200",
-  ],
+  ["fixed", "inset-0", "z-20", "duration-200", "backdrop-blur-sm"],
   {
     variants: {
       overlay: {
