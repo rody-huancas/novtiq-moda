@@ -3,20 +3,22 @@ import { modalVariants, overlayVariants } from "./modal.variants";
 import type { ModalProps } from "../../types";
 import { cn } from "../../utils";
 
-const Modal = ({
-  isOpen = false,
-  onClose,
-  title,
-  children,
-  className,
-  closeOnOverlayClick = true,
-  closeOnEsc = true,
-  size,
-  position = "center",
-  showCloseButton = true,
-  hasOverlay = true,
-  overlay = "default",
-}: ModalProps) => {
+const Modal = (props: ModalProps) => {
+  const {
+    isOpen = false,
+    onClose,
+    title,
+    children,
+    className,
+    closeOnOverlayClick = true,
+    closeOnEsc = true,
+    size,
+    position = "center",
+    showCloseButton = true,
+    hasOverlay = true,
+    overlay = "default",
+  } = props;
+
   const [isClosing, setIsClosing] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
 
@@ -51,7 +53,7 @@ const Modal = ({
       onClose();
       setIsShowing(false);
       setIsClosing(false);
-    }, 200); // Debe coincidir con la duración de la animación
+    }, 200);
   };
 
   if (!isShowing) return null;
