@@ -32,7 +32,7 @@ module.exports = {
 First, import the `Modal` component and use it in your project. Ensure Tailwind CSS is included in your project to fully leverage the modal's functionality.
 
 ```tsx
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "novtiq-modal";
 
 const App = () => {
@@ -72,31 +72,40 @@ export default App;
 
 ### Main Properties
 
-| Prop                  | Type              | Description                                      | Default Value  |                                 |             |        |
-| --------------------- | ----------------- | ------------------------------------------------ | -------------- | ------------------------------- | ----------- | ------ |
-| `isOpen`              | `boolean`         | Controls whether the modal is open or closed.    | `false`        |                                 |             |        |
-| `onClose`             | `() => void`      | Function executed when the modal is closed.      | `undefined`    |                                 |             |        |
-| `title`               | `string`          | Title displayed in the modal header.             | `undefined`    |                                 |             |        |
-| `children`            | `React.ReactNode` | Content rendered inside the modal.               | `undefined`    |                                 |             |        |
-| `className`           | `string`          | Additional classes to customize the modal style. | `undefined`    |                                 |             |        |
-| `size`                | \`"sm"            | "md"                                             | "lg"           | "xl"\`                          | Modal size. | `"md"` |
-| `position`            | \`"top"           | "center"                                         | "bottom"\`     | Vertical position of the modal. | `"center"`  |        |
-| `showCloseButton`     | `boolean`         | Shows the close button in the modal header.      | `true`         |                                 |             |        |
-| `hasOverlay`          | `boolean`         | Displays an overlay behind the modal.            | `true`         |                                 |             |        |
-| `overlay`             | \`"default"       | "dark"\`                                         | Overlay style. | `"default"`                     |             |        |
-| `closeOnOverlayClick` | `boolean`         | Closes the modal when clicking on the overlay.   | `true`         |                                 |             |        |
-| `closeOnEsc`          | `boolean`         | Closes the modal when pressing the Escape key.   | `true`         |                                 |             |        |
+| Prop                  | Type                                                                | Description                                      | Default Value |
+| --------------------- | ------------------------------------------------------------------- | ------------------------------------------------ | ------------- |
+| `isOpen`              | `boolean`                                                           | Controls whether the modal is open or closed.    | `false`       |
+| `onClose`             | `() => void`                                                        | Function executed when the modal is closed.      | `undefined`   |
+| `title`               | `string`                                                            | Title displayed in the modal header.             | `undefined`   |
+| `children`            | `React.ReactNode`                                                   | Content rendered inside the modal.               | `undefined`   |
+| `className`           | `string`                                                            | Additional classes to customize the modal style. | `undefined`   |
+| `size`                | `"sm" \| "md" \| "lg" \| "xl" \| "2xl" \| "3xl" \| "4xl" \| "full"` | Modal size.                                      | `"md"`        |
+| `position`            | `"top" \| "center" \| "bottom"`                                     | Vertical position of the modal.                  | `"center"`    |
+| `showCloseButton`     | `boolean`                                                           | Shows the close button in the modal header.      | `true`        |
+| `hasOverlay`          | `boolean`                                                           | Displays an overlay behind the modal.            | `true`        |
+| `overlay`             | `"default" \| "dark" \| "light" \| "none"`                          | Overlay style.                                   | `"default"`   |
+| `closeOnOverlayClick` | `boolean`                                                           | Closes the modal when clicking on the overlay.   | `true`        |
+| `closeOnEsc`          | `boolean`                                                           | Closes the modal when pressing the Escape key.   | `true`        |
 
-### Advanced Properties
+### `size` Prop
 
-The component also supports advanced customizations using internal hooks and contexts.
+The `size` prop controls the width of the modal. Available options include:
+
+- `sm` - Small size (e.g., `max-w-sm`)
+- `md` - Medium size (e.g., `max-w-md`)
+- `lg` - Large size (e.g., `max-w-lg`)
+- `xl` - Extra-large size (e.g., `max-w-xl`)
+- `2xl` - Double extra-large size (e.g., `max-w-[800px]`)
+- `3xl` - Triple extra-large size (e.g., `max-w-[900px]`)
+- `4xl` - Quadruple extra-large size (e.g., `max-w-[80%]`)
+- `full` - Full-width size (e.g., `max-w-full`)
 
 ## Advanced Example
 
 You can customize the modal's behavior according to your needs:
 
 ```tsx
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "novtiq-modal";
 
 const AdvancedModalExample = () => {
