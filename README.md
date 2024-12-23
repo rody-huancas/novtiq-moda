@@ -32,8 +32,9 @@ module.exports = {
 First, import the `Modal` component and use it in your project. Ensure Tailwind CSS is included in your project to fully leverage the modal's functionality.
 
 ```tsx
-import React, { useState } from "react";
-import Modal from "novtiq-modal";
+import { useState } from "react";
+import { Modal } from "novtiq-modal";
+import "novtiq-modal/dist/novtiq-modal.css";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,8 +106,9 @@ The `size` prop controls the width of the modal. Available options include:
 You can customize the modal's behavior according to your needs:
 
 ```tsx
-import React, { useState } from "react";
-import Modal from "novtiq-modal";
+import { useState } from "react";
+import { Modal } from "novtiq-modal";
+import "novtiq-modal/dist/novtiq-modal.css";
 
 const AdvancedModalExample = () => {
   const [isOpen, setIsOpen] = useState(false);
