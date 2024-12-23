@@ -2,6 +2,8 @@
 
 `novtiq-modal` is a highly customizable modal library built with React and designed to work seamlessly with Tailwind CSS. It offers features such as animation support, scroll locking, keyboard closing, and position options.
 
+📚 **[View Interactive Documentation & Examples](https://novtiq-modal.vercel.app/)**
+
 ## Installation
 
 Before starting, ensure you have Node.js and npm installed. Then, install the library by running:
