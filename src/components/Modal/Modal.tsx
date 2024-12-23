@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 /* Components */
 import ModalHeader from "./ModalHeader";
 import ModalContent from "./ModalContent";
@@ -15,7 +16,7 @@ import { useModalScrollLock } from "../../hooks/useModalScrollLock";
 /* Context */
 import { ModalProvider } from "../../context/ModalContext";
 
-const Modal: React.FC<ModalProps> = (props) => {
+const Modal = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   const {
     isOpen = false,
     onClose,
@@ -51,6 +52,7 @@ const Modal: React.FC<ModalProps> = (props) => {
   return (
     <ModalProvider onClose={handleClose}>
       <div
+        ref={ref}
         className={cn(
           "fixed inset-0 flex justify-center z-50",
           getPositionClasses(),
@@ -104,6 +106,8 @@ const Modal: React.FC<ModalProps> = (props) => {
       </div>
     </ModalProvider>
   );
-};
+});
+
+Modal.displayName = "Modal";
 
 export default Modal;
