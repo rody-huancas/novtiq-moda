@@ -60,7 +60,7 @@ export const Default: Story = {
           className="bg-indigo-600 py-3 px-5 rounded-lg text-white"
           onClick={handleOpen}
         >
-          Open
+          Open Modal
         </button>
         <Modal {...args} isOpen={isOpen} onClose={handleClose}>
           <p>This is the modal content. You can add any custom content here.</p>
