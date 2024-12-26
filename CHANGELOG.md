@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/rody-huancas/novtiq-modal/compare/v0.1.0...v0.2.0) (2024-12-26)
+
+
+### Features
+
+* **new dependency:** add new dependency ([c0a1690](https://github.com/rody-huancas/novtiq-modal/commit/c0a1690e638db6fa213304d4778b7376b09e7d5e))
+
 # [0.1.0](https://github.com/rody-huancas/novtiq-modal/compare/v0.0.4...v0.1.0) (2024-12-26)
 
 
