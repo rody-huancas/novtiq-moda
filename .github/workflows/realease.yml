@@ -25,7 +25,7 @@ jobs:
         with:
           version: latest
       - name: Install dependencies
-        run: pnpm clean-install
+        run: pnpm install
       - name: Build the project
         run: pnpm run build
       - name: Verify signatures
