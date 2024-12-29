@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/rody-huancas/novtiq-modal/compare/v0.2.0...v0.3.0) (2024-12-29)
+
+
+### Features
+
+* **readme:** update documentation ([1db2a1b](https://github.com/rody-huancas/novtiq-modal/commit/1db2a1b84a1642fc755eec349f922a970e924659))
+
 # [0.2.0](https://github.com/rody-huancas/novtiq-modal/compare/v0.1.0...v0.2.0) (2024-12-26)
 
 
